@@ -1,11 +1,139 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <title></title>
-    </head>
-    <body style="background-color:#88898a;">
-        <h1>Some heading</h1>
-        <p>text about me</p>
-    </body>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+.AboutMePic{
+    width: 100%;
+}
+
+.imgSize{
+    width: 100%;
+    height: 300px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>PROJECT BLOG</h2>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>NAS on a raspberry pi 4</h2>
+      <h5>Building my own NAS on a raspberry on my home network, Dec 4, 2021</h5>
+      <!-- <div class="fakeimg" style="height:200px;">Image</div> -->
+      <img class="imgSize" src="img/pi.jpg" alt="raspberry pi NAS">
+      <p>NAS with ssh</p>
+      <p>There are many ways to set up a network storage. One way to to set it up is with <strong>samba</strong> although it allows for more complex protocols it will take some hours to learn. A easier approach is to set up the connection with ssh. Find the ip address with the <strong>ip a</strong> command on the pi and then and the connection in <strong>other location</strong> on ubuntu with the command <strong>ssh://[IP ADDRESS]</strong></p>
+    </div>
+    <div class="card">
+      <h2>New server added</h2>
+      <h5>Got given a HP Motherboard with RAM, tower coller and a CPU, Sep 2, 2017</h5>
+      <!-- <div class="fakeimg" style="height:200px;">Image</div> -->
+      <img class="imgSize" src="img/IMG_2187 2.png" alt="Hp 5188-8534 M2N68-LA Motherboard ">
+      <p>Spin an old computer to life</p>
+      <p>Just picked up a HP 5188 motherboard, AMD Athlon 2X duel CPU and 2 Gigs of RAM. The system is quite old since it came out in 2006, but my plan is to bring it back to life with Lubuntu or some sort of arch linux.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <img class="AboutMePic" src="img/meblog.png" alt="simon nyvall">
+      <!-- <div class="fakeimg" style="height:100px;">Image</div> -->
+      <p>I'm a 19 year old brunette, who thought I could make a blog to share my learnings with the world. :) </p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div>
+    </div>
+    <div class="card">
+      <h3>Follow Me / Contect</h3>
+      <p>Instagram : simon_nyvall
+         Github : SimonNyvall
+         eMail : simon.k.nyvall@gmail.com
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
 </html>
